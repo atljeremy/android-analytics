@@ -39,3 +39,9 @@ dependencies {
     compileOnly 'com.google.firebase:firebase-core:17.1.0'
     compileOnly 'com.google.dagger:dagger:2.16'
 }
+
+tasks.withType(org.jetbrains.kotlin.gradle.tasks.KotlinCompile).all {
+    kotlinOptions {
+        jvmTarget = "1.8"
+    }
+}
