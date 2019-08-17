@@ -1,10 +1,23 @@
 apply plugin: 'com.android.library'
 apply plugin: 'kotlin-android-extensions'
 apply plugin: 'kotlin-android'
+apply plugin: 'com.github.dcendents.android-maven'
+
+group='com.github.YourUsername'
+
+buildscript {
+    repositories {
+        maven { url 'https://maven.google.com' }
+        google()
+        jcenter()
+    }
+    dependencies {
+        classpath 'com.github.dcendents:android-maven-gradle-plugin:2.1'
+    }
+}
 
 android {
     compileSdkVersion 28
-
 
     defaultConfig {
         minSdkVersion 15
