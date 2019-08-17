@@ -1,5 +1,2 @@
-<manifest package="com.jeremyfox.analytics">
-
-    <application />
-
-</manifest>
+<manifest xmlns:android="http://schemas.android.com/apk/res/android"
+    package="com.jeremyfox.analytics" />
