@@ -7,6 +7,7 @@ group='com.github.atljeremy'
 
 android {
     compileSdkVersion 28
+    buildToolsVersion '29.0.2'
 
     defaultConfig {
         minSdkVersion 15
@@ -33,18 +34,9 @@ dependencies {
     androidTestImplementation 'androidx.test.espresso:espresso-core:3.2.0'
 
     api 'androidx.appcompat:appcompat:1.0.2'
-    api "androidx.core:core-ktx:1.0.2"
+    api 'androidx.core:core-ktx:1.0.2'
     api "org.jetbrains.kotlin:kotlin-stdlib-jdk7:$kotlin_version"
 
     compileOnly 'com.google.firebase:firebase-core:17.1.0'
     compileOnly 'com.google.dagger:dagger:2.16'
-}
-
-task sourcesJar(type: Jar) {
-    from android.sourceSets.main.java.srcDirs
-    classifier = 'sources'
-}
-
-artifacts {
-    archives sourcesJar
 }
