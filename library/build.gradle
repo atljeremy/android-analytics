@@ -39,3 +39,12 @@ dependencies {
     compileOnly 'com.google.firebase:firebase-core:17.1.0'
     compileOnly 'com.google.dagger:dagger:2.16'
 }
+
+task sourcesJar(type: Jar) {
+    from android.sourceSets.main.java.srcDirs
+    classifier = 'sources'
+}
+
+artifacts {
+    archives sourcesJar
+}
