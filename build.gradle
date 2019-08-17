@@ -3,7 +3,7 @@ apply plugin: 'kotlin-android-extensions'
 apply plugin: 'kotlin-android'
 apply plugin: 'com.github.dcendents.android-maven'
 
-group='com.github.YourUsername'
+group='com.github.atljeremy'
 
 buildscript {
     repositories {
@@ -12,8 +12,15 @@ buildscript {
         jcenter()
     }
     dependencies {
+        classpath 'com.android.tools.build:gradle:3.4.2'
+        classpath "org.jetbrains.kotlin:kotlin-gradle-plugin:$kotlin_version"
         classpath 'com.github.dcendents:android-maven-gradle-plugin:2.1'
     }
+}
+
+repositories {
+    google()
+    mavenCentral()
 }
 
 android {
@@ -47,17 +54,14 @@ android {
 dependencies {
     implementation fileTree(dir: 'libs', include: ['*.jar'])
 
-    implementation 'androidx.appcompat:appcompat:1.0.2'
     testImplementation 'junit:junit:4.12'
     androidTestImplementation 'androidx.test:runner:1.2.0'
     androidTestImplementation 'androidx.test.espresso:espresso-core:3.2.0'
-    compile "androidx.core:core-ktx:+"
+
+    implementation 'androidx.appcompat:appcompat:1.0.2'
+    implementation "androidx.core:core-ktx:1.0.2"
     implementation "org.jetbrains.kotlin:kotlin-stdlib-jdk7:$kotlin_version"
 
-    compileOnly 'com.google.firebase:firebase-core:17.0.1'
-//    implementation 'com.google.firebase:firebase-core:17.0.1'
+    compileOnly 'com.google.firebase:firebase-core:17.1.0'
     compileOnly 'com.google.dagger:dagger:2.16'
-}
-repositories {
-    mavenCentral()
 }
