@@ -1,15 +1,14 @@
 apply plugin: 'com.android.library'
-apply plugin: 'kotlin-android-extensions'
 apply plugin: 'kotlin-android'
+apply plugin: 'kotlin-android-extensions'
 apply plugin: 'com.github.dcendents.android-maven'
 
 group='com.github.atljeremy'
 
 buildscript {
     repositories {
-        maven { url 'https://maven.google.com' }
-        google()
         jcenter()
+        google()
     }
     dependencies {
         classpath 'com.android.tools.build:gradle:3.4.2'
@@ -19,8 +18,8 @@ buildscript {
 }
 
 repositories {
+    jcenter()
     google()
-    mavenCentral()
 }
 
 android {
