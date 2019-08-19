@@ -9,7 +9,7 @@ An extremely lightweight analytics library that allows an android application to
 Start by adding the library to your project.
 
 ```
-// to do
+implementation 'com.github.atljeremy:android-analytics:v0.0.10'
 ```
 
 ### Create Your Processor(s) (Optional)
